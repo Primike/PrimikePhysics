@@ -1,0 +1,30 @@
+#navbaritems {
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px;
+}
+
+#navbartitle {
+    color: rgb(255, 255, 255);
+}
+
+#navbartext {
+    color: rgb(255, 255, 255);
+}
+
+#navbaritems :hover{
+    background-color:rgb(145, 204, 201);
+}
+
+@media (max-width: 700px) {
+    #navbaritems {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 1200px) {
+    #navbaritems {
+        font-size: medium;
+    }
+}

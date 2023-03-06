@@ -1,0 +1,24 @@
+#nasaimagediv {
+    text-align: center;
+}
+
+#nasaimage {
+    height: 60%;
+    width: 60%;
+    border: rgb(104, 101, 101) solid 1px;
+    box-shadow: 7px 7px #414141;
+}
+
+@media (max-width: 700px) {
+    #hometext {
+      font-size: x-large;
+    }
+  
+    #biotitle {
+      font-size: x-large;
+    }
+  
+    #bioparagraph {
+      font-size: small;
+    }
+  }
