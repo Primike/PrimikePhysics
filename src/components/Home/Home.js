@@ -14,18 +14,18 @@ function Home() {
     return (
         <>
             {dailypic ? 
-                <div className="container-fluid">
-                    <div className="row align-items-center gx-5">
-                        <div className="col-md-6" id="nasaimagediv">
+                <div className="container-fluid" id="nasa-container-div">
+                    <div className="row align-items-center justify-content-md-center" id="nasa-row-div">
+                        <div className="col-md-5" id="nasa-image-div">
                             <a href={dailypic.url} >
-                                <img src={dailypic.url} alt={dailypic.title} className="img" id="nasaimage"/>
+                                <img src={dailypic.url} alt={dailypic.title} className="img" id="nasa-image"/>
                             </a>
                         </div>
-                        <div className="col-md-6">
-                            <h1 className = "welcomenasa">Welcome! Here is you NASA pic of the day</h1>
-                            <h2>{dailypic.title}</h2>
-                            <h3>{dailypic.date}</h3>             
-                            <p>{dailypic.explanation}</p>
+                        <div className="col-md-5" id="nasa-text-div">
+                            {/* <h1 >Welcome! Here is you NASA pic of the day</h1> */}
+                            <h2 id="nasa-title">{dailypic.title}</h2>
+                            <p id="nasa-text">{dailypic.date}</p>             
+                            <p id="nasa-text">{dailypic.explanation}</p>
                         </div>
                     </div>
                 </div>
