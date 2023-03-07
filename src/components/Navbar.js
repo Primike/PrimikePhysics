@@ -7,10 +7,10 @@ function Navbar() {
     const hrefLinks = ["/", "courses", "numericalmethods", "grapher"]
 
 
-    let list = tabNames.map((name, i) => {
+    let list = tabNames.map((name, index) => {
         return (
-            <div className="col" id="navbaritems">
-                <a id="navbartext" href = {hrefLinks[i]}>{name}</a>
+            <div className="col" id="navbaritems" key={name}>
+                <a id="navbartext" href = {hrefLinks[index]}>{name}</a>
             </div>
         )
     })

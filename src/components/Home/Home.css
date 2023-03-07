@@ -11,8 +11,8 @@
 }
 
 #nasa-image {
-    height: 60%;
-    width: 60%;
+    height: 90%;
+    width: 90%;
     border: rgb(104, 101, 101) solid 1px;
     /* box-shadow: 7px 7px #414141; */
 }
@@ -29,12 +29,37 @@
     font-size: 20px;
 }
 
-@media (max-width: 700px) {
-    #nasa-image {
-        height: 80%;
-        width: 90%;
+@media (max-width: 1500px) {
+    #nasa-text-div {
+        margin-top: 10px;
+        padding: 30px;
     }
 
+    #nasa-title {
+        font-size: 30px;
+    }
+
+    #nasa-text {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 1200px) {
+    #nasa-text-div {
+        margin-top: 10px;
+        padding: 30px;
+    }
+
+    #nasa-title {
+        font-size: 20px;
+    }
+
+    #nasa-text {
+        font-size: small;
+    }
+}
+
+@media (max-width: 700px) {
     #nasa-text-div {
         margin-top: 10px;
         padding: 30px;
