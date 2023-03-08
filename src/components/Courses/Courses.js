@@ -4,20 +4,18 @@ import './Courses.css'
 function Courses({courses}) {
     let courseList = courses.map((course, index) => {
         return (
-            <div className="col-md card">
-                <img src={course.subject_image} id="course-image"/>
-                <div className="card-body">
-                    <h5 className="card-title">{course.subject}</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">View Course</a>
-                </div>
+            <div className="col-md-2 card" id="course-col" key={course.subject}>
+                <img src={course.subject_image} className="card-img-top" id="course-image"/>
+                <h1 id="course-name">{course.subject}</h1>
+                <p id="course-description">Some quick example text to build on the card title and make up the</p>
+                <a href={`/${course.subject}`}  className="btn btn-primary">View Course</a>
             </div>   
         )
     })
 
     return (
-        <div className ="container-fluid p-3">
-            <div className="row justify-content-md-center">
+        <div className ="container-fluid" id="courses-container">
+            <div className="row justify-content-md-center mx-auto" id="courses-row">
                 {courseList}
             </div>
         </div>

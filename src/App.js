@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home/Home'
 import Courses from './components/Courses/Courses'
+import Course from './components/Courses/Course/Course'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useQuery from './query/useQuery';
 import { useEffect, useState } from "react";
@@ -27,6 +28,12 @@ function App() {
           <Route path="numericalmethods" element={<Home />} />
           <Route path="grapher" element={<Home />} />
           <Route path="graph" element={<Home />} />
+          {courses.map((course) => (
+              <Route 
+                path = {`/${course.subject}`} 
+                key ={`${course.subject}course`} 
+                element={<Course course={course}/>}/>
+          ))}
         </Routes>
       </BrowserRouter>
     </div>
