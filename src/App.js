@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home/Home'
 import Courses from './components/Courses/Courses'
 import Course from './components/Courses/Course/Course'
+import Grapher from './components/Grapher/Grapher';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useQuery from './query/useQuery';
 import { useEffect, useState } from "react";
@@ -17,7 +18,7 @@ function App() {
     .then(res => res.json())
     .then(courses => setCourses(courses))
   }, [])
-
+  
   return (
     <div className="App">
       <Navbar/>
@@ -26,8 +27,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="courses" element={<Courses courses={courses}/>} />
           <Route path="numericalmethods" element={<Home />} />
-          <Route path="grapher" element={<Home />} />
-          <Route path="graph" element={<Home />} />
+          <Route path="grapher" element={<Grapher />} />
           {courses.map((course) => (
               <Route 
                 path = {`/${course.subject}`} 
