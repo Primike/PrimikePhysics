@@ -7,10 +7,12 @@
 
 #navbartitle {
     color: rgb(255, 255, 255);
+    font-size: xx-large;
 }
 
 #navbartext {
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 #navbaritems :hover{

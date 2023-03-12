@@ -16,7 +16,7 @@ function Home() {
             {dailypic ? 
                 <>
                     <div className="container-fluid text-center">
-                        <h1>Welcome! Here is you NASA pic of the day</h1>
+                        {/* <h1>Welcome! Here is you NASA pic of the day</h1> */}
                     </div>
                     <div className="container-fluid" id="nasa-container-div">
                         <div className="row align-items-center justify-content-md-center" id="nasa-row-div">

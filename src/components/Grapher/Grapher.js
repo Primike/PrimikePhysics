@@ -6,11 +6,6 @@ function Grapher() {
     const [eqn, setEqn] = useState('x');
     const [der, setDer] = useState('1');
 
-    // const handle = () => {
-    //     localStorage.setItem('Equation', eqn);
-    //     localStorage.setItem('Derivative', der);
-    //  };
-
 
     return (
         <div className = "numericalmethoddiv">        
