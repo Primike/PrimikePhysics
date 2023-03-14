@@ -9,23 +9,23 @@ function Navbar() {
 
     let list = tabNames.map((name, index) => {
         return (
-            <div className="col-2" id="navbaritems" key={name}>
+            <div className="col" id="navbaritems" key={name}>
                 <a id="navbartext" href = {hrefLinks[index]}>{name}</a>
             </div>
         )
     })
 
     return (
-        <nav className="container-fluid">
-            <div className='row align-items-center justify-content-between'>
-                <div className="col-md-4 fs-2 text-center fw-bold" id="navbartitle">🔭Primike Physics</div>
-                <div className="col-md-4 p-3">
-                    <div className='row'>
+        <div className="container-fluid" id="navbar-container">
+            <div className='row justify-content-evenly'>
+                <div className="col-md-4" id="navbartitle">Primike Physics🔭</div>
+                <div className="col-md-3">
+                    <div className='row text-center'>
                         {list}
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
     )
 }
 
