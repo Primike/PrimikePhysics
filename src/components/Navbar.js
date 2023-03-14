@@ -9,18 +9,18 @@ function Navbar() {
 
     let list = tabNames.map((name, index) => {
         return (
-            <div className="col" id="navbaritems" key={name}>
-                <a id="navbartext" href = {hrefLinks[index]}>{name}</a>
+            <div className="col" key={name}>
+                <a id="navbar-link" href = {hrefLinks[index]}>{name}</a>
             </div>
         )
     })
 
     return (
         <div className="container-fluid" id="navbar-container">
-            <div className='row justify-content-evenly'>
-                <div className="col-md-4" id="navbartitle">Primike Physics🔭</div>
+            <div className='row justify-content-evenly row align-items-center'>
+                <div className="col-md-3" id="navbar-title">Primike Physics🔭</div>
                 <div className="col-md-3">
-                    <div className='row text-center'>
+                    <div className='row flex-nowrap'>
                         {list}
                     </div>
                 </div>
