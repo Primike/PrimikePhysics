@@ -1,22 +1,17 @@
-#welcome-text {
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-
-#nasa-container-div {
+#nasa-container {
     margin-top: 20px;
     margin-bottom: 300px;
 }
 
 #nasa-image-div {
-    /* text-align: center; */
-    background-color: beige;
+    background-color: rgb(194, 194, 95);
 }
 
 #nasa-image {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    position: center;
+    background-size: cover;
     /* border: rgb(104, 101, 101) solid 4px; */
 }
 
