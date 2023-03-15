@@ -1,19 +1,25 @@
+#navbar-div {
+    background: url("https://stsci-opo.org/STScI-01GQJH85CY08QA6A4S0M4FS109.png") no-repeat center center; 
+    text-align: center;
+    background-size: cover;
+}
+
 #navbar-container {
     text-align: center;
-    padding: 50px 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px 0;
 }
 
 #navbar-title {
     color: rgb(255, 255, 255);
     font-size: xx-large;
     font-weight: bold;
+    text-decoration: none;
 }
 
 #navbar-link {
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-style: italic;
+    /* font-style: italic; */
     text-decoration: none;
     font-size: large;
 }
@@ -22,6 +28,24 @@
     background-color:rgb(145, 204, 201);
 }
 
+
+#custom-container {
+    height: 450px;
+    color: rgb(255, 255, 255);
+    width: 90%;
+}
+
+#home-title {
+    padding-top: 100px;
+}
+
+#home-text {
+    padding-top: 20px;
+}
+
+#home-button {
+    margin-top: 40px;
+}
 @media (max-width: 800px) {
     #navbar-container {
         padding: 15px 0;

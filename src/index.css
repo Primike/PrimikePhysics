@@ -5,11 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url("https://stsci-opo.org/STScI-01GQJH85CY08QA6A4S0M4FS109.png") no-repeat center center fixed; 
-
+  /* background: url("https://stsci-opo.org/STScI-01GQJH85CY08QA6A4S0M4FS109.png") no-repeat center center fixed;  */
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+/* @media (max-width: 800px) {
+  body {
+    background: url("https://images.unsplash.com/photo-1539537127563-ef4adaf6e056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGFyayUyMHNwYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80") ; 
+  }
+} */
