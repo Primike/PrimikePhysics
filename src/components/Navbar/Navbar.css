@@ -47,6 +47,10 @@
     margin-top: 40px;
 }
 @media (max-width: 800px) {
+    #navbar-div {
+        background: url("https://images.unsplash.com/photo-1539537127563-ef4adaf6e056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGFyayUyMHNwYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80") ; 
+    }
+    
     #navbar-container {
         padding: 15px 0;
     }
