@@ -1,24 +1,30 @@
-// import CourseCard from './CourseCard'
 import './Courses.css'
 
 function Courses({courses}) {
     let courseList = courses.map((course, index) => {
         return (
-            <div className="col-md-2 card" id="course-col" key={course.subject}>
-                <img src={course.subject_image} className="card-img-top" id="course-image"/>
-                <h1 id="course-name">{course.subject}</h1>
-                <p id="course-description">Some quick example text to build on the card title and make up the</p>
-                <a href={`/${course.subject}`}  className="btn btn-primary">View Course</a>
+            <div className="col-md-2" key={course.subject}>
+                <div className='card'>
+                    <img className='card-img-top' src={course.subject_image} id="course-image"/>
+                    <div className='card-body'>
+                        <h5 id="course-name">{course.subject}</h5>
+                        <p id="course-description">Some quick example text to build on the card title and make up the</p>
+                    </div>
+                    <div className='card-footer p-3 h-100'>
+                        <a className="btn btn-primary" href={`/${course.subject}`}>View Course</a>
+                    </div>
+                </div>
             </div>   
         )
     })
 
     return (
-        <div className ="container-fluid" id="courses-container">
-            <div className="row justify-content-md-center mx-auto" id="courses-row">
+        <div className ="container-xl" >
+            <div className="row row-cols-1">
                 {courseList}
             </div>
         </div>
+
     )
 }
 
