@@ -1,4 +1,5 @@
 import './Courses.css'
+import Navbar from "../Navbar/Navbar";
 
 function Courses({courses}) {
     let courseList = courses.map((course, index) => {
@@ -19,12 +20,14 @@ function Courses({courses}) {
     })
 
     return (
-        <div className ="container-xl" >
-            <div className="row row-cols-1">
-                {courseList}
+        <>
+            <Navbar/>
+            <div className ="container-xl" >
+                <div className="row row-cols-1">
+                    {courseList}
+                </div>
             </div>
-        </div>
-
+        </>
     )
 }
 

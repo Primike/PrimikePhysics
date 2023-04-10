@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css"
+import Navbar from "../Navbar/Navbar";
 
 function Home() {    
     const [dailypic, setDailyPic] = useState([])
@@ -55,6 +56,7 @@ function Home() {
 
     return (
         <>
+            <Navbar/>
             {dailypic ? 
                 <div id="home-div">
                     <div className="container-fluid" id="nasa-container">

@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home'
 import Courses from './components/Courses/Courses'
-import Course from './components/Courses/Course/Course'
+import Course from './components/Courses/components/Course'
 import Grapher from './components/Grapher/Grapher';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useQuery from './query/useQuery';
@@ -21,7 +21,6 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route path="/PrimikePhysics" element={<Home/>} />
