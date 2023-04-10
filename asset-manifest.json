@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PrimikePhysics/static/css/main.893e8b05.css",
-    "main.js": "/PrimikePhysics/static/js/main.de9c6362.js",
+    "main.css": "/PrimikePhysics/static/css/main.e6ff2fe5.css",
+    "main.js": "/PrimikePhysics/static/js/main.af6532d4.js",
     "static/js/787.ced24c25.chunk.js": "/PrimikePhysics/static/js/787.ced24c25.chunk.js",
     "index.html": "/PrimikePhysics/index.html",
-    "main.893e8b05.css.map": "/PrimikePhysics/static/css/main.893e8b05.css.map",
-    "main.de9c6362.js.map": "/PrimikePhysics/static/js/main.de9c6362.js.map",
+    "main.e6ff2fe5.css.map": "/PrimikePhysics/static/css/main.e6ff2fe5.css.map",
+    "main.af6532d4.js.map": "/PrimikePhysics/static/js/main.af6532d4.js.map",
     "787.ced24c25.chunk.js.map": "/PrimikePhysics/static/js/787.ced24c25.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.893e8b05.css",
-    "static/js/main.de9c6362.js"
+    "static/css/main.e6ff2fe5.css",
+    "static/js/main.af6532d4.js"
   ]
 }
