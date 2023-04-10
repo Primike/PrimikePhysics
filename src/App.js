@@ -24,10 +24,10 @@ function App() {
       <Navbar/>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="courses" element={<Courses courses={courses}/>} />
-          <Route path="numericalmethods" element={<Home />} />
-          <Route path="grapher" element={<Grapher />} />
+          <Route path="/PrimikePhysics" element={<Home/>} />
+          <Route path="/PrimikePhysics/courses" element={<Courses courses={courses}/>} />
+          <Route path="/PrimikePhysics/numericalmethods" element={<Home />} />
+          <Route path="/PrimikePhysics/grapher" element={<Grapher />} />
           {courses.map((course) => (
               <Route 
                 path = {`/${course.subject}`} 

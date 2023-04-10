@@ -20,7 +20,7 @@ function Grapher() {
                 <h2>Use log(x) for ln(x)</h2>
             </form>
             <div>
-                {/* <Graph equation={eqn} derivative={der}/> */}
+                <Graph equation={eqn} derivative={der}/>
             </div>
         </div>
     )
