@@ -1,0 +1,30 @@
+/* GraphPage.css */
+.graph-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .container1,
+  .container2 {
+    width: 49%;
+    padding: 1rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-input {
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    cursor: pointer;
+  }
+  
+  .plot-container {
+    height: 400px;
+  }
+  

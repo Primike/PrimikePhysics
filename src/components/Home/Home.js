@@ -93,11 +93,11 @@ function Home() {
 
                     <div id="divider"></div>
 
-                    {/* <div className="container-md">
+                    <div className="container-md">
                         <div className="row row-cols-2 row-cols-md-4 g-3">
                             {imagesList}
                         </div>
-                    </div> */}
+                    </div>
                 </div>
                 :
                 <></>
