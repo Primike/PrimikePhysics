@@ -21,6 +21,7 @@ function App() {
   
   return (
     <div className="App">
+      <Grapher/>
       <BrowserRouter>
         <Routes>
           <Route path="/PrimikePhysics" element={<Home/>} />
