@@ -3,7 +3,7 @@ import Home from './components/Home/Home'
 import Courses from './components/Courses/Courses'
 import Course from './components/Courses/components/Course'
 import Grapher from './components/Grapher/Grapher';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import useQuery from './query/useQuery';
 import { useEffect, useState } from "react";
 
@@ -21,7 +21,7 @@ function App() {
   
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/PrimikePhysics" element={<Home/>} />
           <Route path="/PrimikePhysics/courses" element={<Courses courses={courses}/>} />
@@ -34,7 +34,7 @@ function App() {
                 element={<Course course={course}/>}/>
           ))}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
