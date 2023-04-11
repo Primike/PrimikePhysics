@@ -4,7 +4,7 @@ import functionPlot from 'function-plot';
 import './Grapher.css';
 
 const Grapher = () => {
-  const [equation, setEquation] = useState('x');
+  const [equations, setEquations] = useState([{ expression: 'x' }]);
   const [xRange, setXRange] = useState('-10,10');
   const [yRange, setYRange] = useState('-10,10');
   const chartRef = useRef(null);
@@ -17,15 +17,15 @@ const Grapher = () => {
     const [xMin, xMax] = xRange.split(',').map(Number);
     const [yMin, yMax] = yRange.split(',').map(Number);
 
+    const validEquations = equations.filter((eq) => eq.expression.trim() !== '');
+
     functionPlot({
       target: chartRef.current,
-      data: [
-        {
-          fn: equation,
-          sampler: 'builtIn',
-          graphType: 'polyline',
-        },
-      ],
+      data: validEquations.map((eq) => ({
+        fn: eq.expression,
+        sampler: 'builtIn',
+        graphType: 'polyline',
+      })),
       grid: true,
       yAxis: { domain: [yMin, yMax] },
       xAxis: { domain: [xMin, xMax] },
@@ -37,19 +37,50 @@ const Grapher = () => {
     plotGraph();
   };
 
+  const addEquation = () => {
+    if (equations.length < 5) {
+      setEquations([...equations, { expression: '' }]);
+    }
+  };
+
+  const removeEquation = (index) => {
+    const newEquations = [...equations];
+    newEquations.splice(index, 1);
+    setEquations(newEquations);
+    plotGraph();
+  };
+
   return (
     <div className="graph-container">
       <div className="container1">
         <form onSubmit={handleSubmit} className="form">
-          <label>
-            Equation:
-            <input
-              className="form-input"
-              type="text"
-              value={equation}
-              onChange={(e) => setEquation(e.target.value)}
-            />
-          </label>
+          {equations.map((eq, index) => (
+            <div key={index}>
+              <label>
+                Equation {index + 1}:
+                <input
+                  className="form-input"
+                  type="text"
+                  value={eq.expression}
+                  onChange={(e) => {
+                    const newEquations = [...equations];
+                    newEquations[index] = { expression: e.target.value };
+                    setEquations(newEquations);
+                    plotGraph();
+                  }}
+                />
+              </label>
+              {index > 0 && (
+                <button
+                  type="button"
+                  className="button"
+                  onClick={() => removeEquation(index)}
+                >
+                  -
+                </button>
+              )}
+            </div>
+          ))}
           <label>
             X Range (min,max):
             <input
@@ -71,14 +102,20 @@ const Grapher = () => {
           <button type="submit" className="button">
             Plot Graph
           </button>
+          <button type="button" className="button" onClick={addEquation}>
+            Add Equation
+          </button>
         </form>
-      </div>
+        </div>
       <div className="container2">
-        <div ref={chartRef} className="plot-container" />
+        <div ref={chartRef} />
       </div>
     </div>
   );
 };
+
+
+
 
 
 
