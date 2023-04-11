@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Home.css"
 import Navbar from "../Navbar/Navbar";
 import ISS from "./components/ISS";
+import Nasa from "./components/Nasa";
+// import Mars from "./components/Mars";
 
 function Home() {    
     const [dailypic, setDailyPic] = useState([])
@@ -26,84 +28,17 @@ function Home() {
         .then(images => setMarsImages(images))
     }, [])
 
-    let peopleList = people.people?.map((person, index) => {
-        return (
-            <div className="col" id="person-col-div" key={person.name}>
-                <div className="card h-100">
-                    <div className="card-body">
-                        <div className="card-title">
-                            {person.name}
-                        </div>
-                        {/* <div className="card-text">
-                            {person.craft}
-                        </div> */}
-                    </div>
-                </div>
-            </div>
-        )
-    })
-
-    let imagesList = marsImages.latest_photos?.slice(0,12).map((image, index) => {
-        return (
-            <div className="col" key={image.id}>
-                <div className="card h-100" id="mars-card">
-                    <div className="card-body">
-                        <img src={image.img_src} id="mars-image"/>
-                    </div>
-                </div>
-            </div>
-        )
-    })
-
     return (
         <>
             <Navbar/>
-            {dailypic ? 
                 <div id="home-div">
-                    <div className="container-fluid" id="nasa-container">
-                        <h1 id="nasa-welcome-text">Here is you NASA pic of the day</h1>
-                        <div className="row align-items-center justify-content-evenly" id="nasa-row-div">
-                            <div className="col-md-5" id="nasa-image-div">
-                                <a href={dailypic.url}>
-                                    <img src={dailypic.url} alt={dailypic.title} id="nasa-image"/>
-                                </a>
-                            </div>
-                            <div className="col-md-5" id="nasa-text-div">
-                                <h1 id="nasa-title">{dailypic.title}</h1>
-                                <p id="nasa-date-text">{dailypic.date}</p>             
-                                <p id="nasa-text">{dailypic.explanation}</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <Nasa dailypic={dailypic}/>
                     <div id="divider"></div>
-                    {<ISS people={people}/>}
-{/* 
-                    <div className="container-fluid" id="iss-container">
-                        <div className="row align-items-center justify-content-evenly g-3">
-                            <h1 id="iss-title">There are currently {people.number} people aboard the Internation Space Station</h1>
-                            <div className="col-md-5">
-                                <div className="row row-cols-2 row-cols-md-4 g-3">
-                                    {peopleList}
-                                </div>
-                            </div>
-                            <div className="col-md-5">
-                                <img id="iss-image" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss068e056697.jpg" alt="ISS"/>
-                            </div>
-                        </div>
-                    </div> */}
-
+                    <ISS people={people.people}/>
                     <div id="divider"></div>
-
-                    <div className="container-md">
-                        <div className="row row-cols-2 row-cols-md-4 g-3">
-                            {imagesList}
-                        </div>
-                    </div>
+                    {/* <Mars marsImages={marsImages}/> */}
                 </div>
-                :
-                <></>
-            }
+
         </>
     )
 }
