@@ -121,6 +121,7 @@ const Grapher = () => {
 
 
 
+
 // import { useState } from "react";
 // import Graph from './Graph.tsx'
 // import Navbar from "../Navbar/Navbar.js";

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css"
 import Navbar from "../Navbar/Navbar";
+import ISS from "./components/ISS";
 
 function Home() {    
     const [dailypic, setDailyPic] = useState([])
@@ -76,7 +77,8 @@ function Home() {
                     </div>
 
                     <div id="divider"></div>
-
+                    {<ISS people={people}/>}
+{/* 
                     <div className="container-fluid" id="iss-container">
                         <div className="row align-items-center justify-content-evenly g-3">
                             <h1 id="iss-title">There are currently {people.number} people aboard the Internation Space Station</h1>
@@ -89,7 +91,7 @@ function Home() {
                                 <img id="iss-image" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss068e056697.jpg" alt="ISS"/>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div id="divider"></div>
 
