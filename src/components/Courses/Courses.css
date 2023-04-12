@@ -1,55 +1,4 @@
-/* #courses-container {
-    padding: 10px;
-}
-
-#course-col {
-    margin: 10px;
-    padding: 10px;
-}
-
-#course-name {
-    font-size: 22px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-#course-description {
-    font-size: 18px;
-}
-
-#course-image {
-    width: 100%;
-    height: 80%;
-}
-
-@media (max-width: 900px) {
-    #courses-row {
-        display: flex;
-        justify-content: center;
-    }
-
-    #course-col {
-        width: 80%
-    }
-
-    #course-image {
-        height: 250px;
-    }
-} */
-
-/* styles.css */
-/* body {
-  margin: 0;
-  padding: 0;
-}
-
-.page-wrapper {
-  max-width: 100%;
-  overflow-x: hidden;
-} */
-
-.container {
+.courses-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(100% / 3 - 1rem), 1fr));
   gap: 1rem;
@@ -58,33 +7,35 @@
   padding: 1rem;
 }
 
-@media (max-width: 1024px) {
-  .container {
+@media (max-width: 1100px) {
+  .courses-container {
     grid-template-columns: repeat(auto-fit, minmax(calc(100% / 2 - 1rem), 1fr));
   }
 }
 
 @media (max-width: 767px) {
-  .container {
+  .courses-container {
     grid-template-columns: 1fr;
     width: 70%;
   }
 }
 
 .courses-card {
-  display: grid;
-  grid-template-rows: 60% auto auto;
-  min-height: 420px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ccc;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
+
 
 .courses-card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .courses-card-image {
+  min-height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,9 +43,12 @@
   height: 100%;
 }
 
+
 .courses-card-content {
+  flex-grow: 1;
   padding: 1rem;
 }
+
 
 .courses-card-title {
   font-size: 1.2rem;
@@ -106,6 +60,7 @@
 }
 
 .courses-card-button {
+  align-self: center;
   margin: 1rem auto 1.5rem;
   width: 60%;
   padding: 0.5rem 1rem;
@@ -115,12 +70,20 @@
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s;
+  border: none; /* Add this line to remove any border */
+  outline: none; /* Add this line to remove the outline */
+  box-shadow: none; /* Add this line to remove any box-shadow */
 }
+
+
+
+
 
 .courses-card-button:hover {
   background-color: #6e7174;
 }
 
-.courses-card-link{
+.courses-card-link {
   color: white;
+  text-decoration: none;
 }

@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background: url("https://stsci-opo.org/STScI-01GQJH85CY08QA6A4S0M4FS109.png") no-repeat center center fixed;  */
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 code {
@@ -20,6 +21,7 @@ html {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 /* @media (max-width: 800px) {
   body {
