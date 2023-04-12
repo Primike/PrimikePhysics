@@ -1,49 +1,142 @@
 .navbarDiv {
-    background: url('https://stsci-opo.org/STScI-01GQJH85CY08QA6A4S0M4FS109.png') no-repeat center center;
-    text-align: center;
-    background-size: cover;
+  background: url('https://stsci-opo.org/STScI-01GQJH85CY08QA6A4S0M4FS109.png') no-repeat center center;
+  text-align: center;
+  background-size: cover;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbarTitle {
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navbarLink {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: large;
+  margin-left: 20px;
+}
+
+.navbarLink:first-child {
+  margin-left: 0;
+}
+
+.navbarLink:hover {
+  background-color: rgb(145, 204, 201);
+}
+
+
+
+/* Rest of your CSS */
+
+
+
+/* Add the following styles to the existing Navbar.css */
+
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: slideInRight 0.3s;
+}
+
+.mobileMenuClose {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.mobileNavbarLink {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .navbarContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    max-width: 1200px;
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .navbarTitle {
     margin: 0 auto;
   }
-  
-  .navRow {
-    display: flex;
-    align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .navbarContainer {
+    padding: 0 10px;
   }
-  
-  .navCol {
+
+  .navbarTitle {
+    font-size: x-large;
+  }
+
+  .navbarLink {
+    font-size: medium;
     margin-right: 15px;
   }
-  
-  .navColMd3 {
-    flex: 1;
-  }
-  
-  .navbarTitle {
-    color: rgb(255, 255, 255);
-    font-size: xx-large;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .navbarLink {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: large;
-  }
-  
-  .navbarLink:hover {
-    background-color: rgb(145, 204, 201);
-  }
-  
+}
+
+
   .customContainer {
     height: 450px;
     color: rgb(255, 255, 255);
@@ -99,4 +192,5 @@
       font-size: medium;
     }
   }
-  
+
+
