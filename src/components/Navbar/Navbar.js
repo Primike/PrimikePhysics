@@ -4,7 +4,7 @@ import "./Navbar.css"
 function Navbar() {
 
     const tabNames = ["Home", "Courses", "Math", "Grapher"]
-    const hrefLinks = ["/PrimikePhysics", "/PrimikePhysics/courses", "/PrimikePhysics/numericalmethods", "/PrimikePhysics/grapher"]
+    const hrefLinks = ["/", "courses", "numericalmethods", "grapher"]
 
 
     let list = tabNames.map((name, index) => {
