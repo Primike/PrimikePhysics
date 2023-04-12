@@ -45,6 +45,9 @@
 
 /* Rest of your CSS */
 
+.dropdown-content {
+  transition: all 0.3s ease-out;
+}
 
 
 /* Add the following styles to the existing Navbar.css */
@@ -55,8 +58,9 @@
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 24px;
+  font-size: 40px;
   cursor: pointer;
+  margin: auto;
 }
 
 /* Mobile Menu */
@@ -175,7 +179,6 @@
   
     .navbarTitle {
       font-size: x-large;
-      padding-bottom: 15px;
     }
   
     .navbarLink {
@@ -194,3 +197,5 @@
   }
 
 
+
+  

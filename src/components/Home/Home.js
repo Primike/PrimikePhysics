@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import ISS from "./components/ISS";
 import Nasa from "./components/Nasa";
 // import Mars from "./components/Mars";
-
+import Whiteboard from "./Whiteboard";
 function Home() {    
     const [dailypic, setDailyPic] = useState([])
     const [people, setPeople] = useState([])
@@ -38,7 +38,7 @@ function Home() {
                     <div id="divider"></div>
                     {/* <Mars marsImages={marsImages}/> */}
                 </div>
-
+            <Whiteboard/>
         </>
     )
 }
