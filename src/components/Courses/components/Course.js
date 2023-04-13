@@ -17,9 +17,9 @@ function Course({ course }) {
   };
 
   return (
-    <div className="course-container">
-      <div className="container2">
-        <div className="container2-title">
+    <div className="course-div">
+      <div className="chapters-list-div">
+        <div className="chapters-list-title">
           Chapters
           <button className="dropdown-btn" onClick={toggleChapters}>
             &#x25BC;
@@ -29,7 +29,7 @@ function Course({ course }) {
           {course.chapters.map((chapter, index) => (
             <div
               key={index}
-              className="chapter-item"
+              className="chapter-list-item"
               onClick={() => onChapterClick(chapter)}
             >
               {chapter.title}
@@ -38,15 +38,15 @@ function Course({ course }) {
         </div>
       </div>
 
-      <div className="container1">
-        <h1 className="container1-title">{currentChapter.title}</h1>
-        <div className="image-text-wrapper">
+      <div className="chapter-content-div">
+        <h1 className="chapter-title">{currentChapter.title}</h1>
+        <div className="chapter-content">
           <img
-            className="course-image"
+            className="chapter-image"
             src={currentChapter.image}
             alt={currentChapter.title}
           />
-          <p className="course-text">{currentChapter.content}</p>
+          <p className="chapter-text">{currentChapter.content}</p>
         </div>
       </div>
     </div>
@@ -54,3 +54,4 @@ function Course({ course }) {
 }
 
 export default Course;
+
