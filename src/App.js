@@ -1,6 +1,6 @@
 import Home from './components/Home/Home';
 import Courses from './components/Courses/Courses';
-import Course from './components/Courses/components/Course';
+import Course from './components/Courses/Course/Course';
 import Grapher from './components/Grapher/Grapher';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from "react";

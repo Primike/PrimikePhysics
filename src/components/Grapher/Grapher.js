@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import * as math from 'mathjs';
 import functionPlot from 'function-plot';
 import './Grapher.css';
+import Navbar from "../Navbar/Navbar"
 
 const Grapher = () => {
   const [equations, setEquations] = useState([{ expression: 'x' }]);
@@ -51,7 +52,9 @@ const Grapher = () => {
   };
 
   return (
-    <div className="graph-container">
+    <>
+      <Navbar></Navbar>
+          <div className="graph-container">
       <div className="container1">
         <form onSubmit={handleSubmit} className="form">
           {equations.map((eq, index) => (
@@ -111,6 +114,8 @@ const Grapher = () => {
         <div ref={chartRef} />
       </div>
     </div>
+
+    </>
   );
 };
 

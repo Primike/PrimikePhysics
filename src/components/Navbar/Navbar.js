@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const tabNames = ['Home', 'Courses', 'Math', 'Grapher'];
@@ -52,13 +52,7 @@ function Navbar() {
           <div className="mobileMenuContent">{mobileList}</div>
         </div>
       )}
-      <div className="customContainer">
-        <h1 className="homeTitle">Welcome to Primike Physics</h1>
-        <h2 className="homeText">Learn physics, math and discover cool stuff!</h2>
-        <button className="homeButton" type="button">
-          Get Started! ↓
-        </button>
-      </div>
+      {props.children}
     </div>
   );
 }

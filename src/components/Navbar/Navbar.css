@@ -141,32 +141,6 @@
 }
 
 
-  .customContainer {
-    height: 450px;
-    color: rgb(255, 255, 255);
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .homeTitle {
-    padding-top: 100px;
-  }
-  
-  .homeText {
-    padding-top: 20px;
-  }
-  
-  .homeButton {
-    margin-top: 40px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-    text-transform: uppercase;
-  }
   
   @media (max-width: 800px) {
     .navbarDiv {

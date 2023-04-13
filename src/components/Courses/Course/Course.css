@@ -1,0 +1,131 @@
+/* Course.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.course-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.chapters-list-div {
+  padding: 1rem;
+  width: 30%;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-content-div {
+  padding: 1rem;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-title {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.chapter-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chapter-image {
+  width: 450px;
+  height: 400px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-text {
+  width: 45%;
+}
+
+.chapter-list {
+  width: 100%;
+}
+
+.chapter-list-item {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.chapter-list-item:hover {
+  background-color: #eaeaea;
+}
+
+.chapters-list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dropdown-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .course-div {
+    flex-direction: column;
+  }
+
+  .chapters-list-div,
+  .chapter-content-div {
+    width: 100%;
+  }
+
+  .chapter-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .chapter-image {
+    width: 250px;
+    height: 167px;
+    margin-bottom: 1rem;
+  }
+
+  .chapter-text {
+    width: 100%;
+  }
+
+  .dropdown-btn {
+    display: inline;
+    font-size: 1.2rem;
+  }
+
+  .chapter-list {
+    display: none;
+  }
+
+  .chapter-list.visible {
+    display: block;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    border-radius: 5px;
+    left: 10%;
+  }
+}
