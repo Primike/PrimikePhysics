@@ -4,7 +4,7 @@ import Course from './components/Courses/Course/Course';
 import Grapher from './components/Grapher/Grapher';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from "react";
-
+import Math from './components/Math/Math';
 
 function App() {
   const [courses, setCourses] = useState([]);
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="courses" element={<Courses courses={courses} />} />
-          <Route path="numericalmethods" element={<Home />} />
+          <Route path="numericalmethods" element={<Math />} />
           <Route path="grapher" element={<Grapher />} />
           {courses.map((course) => (
             <Route 
