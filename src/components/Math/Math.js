@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Math.css"
 import MathInput from './components/MathInput';
 import Navbar from "../Navbar/Navbar"
@@ -13,15 +13,23 @@ function Math() {
     // Predefined equation string for comparison
     const correctEquation = 'x=y^2';
     const questionEquation = 'x = y^2';
-  
+    useEffect(() => {
+        // Load the saved answer from localStorage
+        const savedAnswer = localStorage.getItem('userAnswer');
+        if (savedAnswer) {
+            console.log(`Loaded saved answer: ${savedAnswer}`);
+        }
+    }, []);
+
     const handleSubmit = () => {
-      const enteredLatex = enteredEquation.latex();
-      setSubmittedEquation(enteredLatex);
-      if (enteredLatex === correctEquation) {
-        setResultMessage('Correct!');
-      } else {
-        setResultMessage('Incorrect. Try again.');
-      }
+        const enteredLatex = enteredEquation.latex();
+        setSubmittedEquation(enteredLatex);
+        if (enteredLatex === correctEquation) {
+            setResultMessage('Correct!');
+            localStorage.setItem('userAnswer', enteredLatex); // Save the correct answer to localStorage
+        } else {
+            setResultMessage('Incorrect. Try again.');
+        }
     };
   
     return (
